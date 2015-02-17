@@ -1,0 +1,8 @@
+.DS_Store
+
+# IntelliJ
+.idea
+*.iml
+
+# Private Parse CloudCode config
+config/
