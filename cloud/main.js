@@ -15,6 +15,6 @@ Parse.Cloud.job("removeUnusedUrbanAirship", function(request, status) {
     }).then(function() {
         status.success(count + " Urban Airship entries removed");
     }, function(error) {
-        status.error(error.message);
+        status.error("Removed: " + count + " before " + error.message);
     });
 });
