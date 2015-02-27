@@ -10,10 +10,11 @@ Parse.Cloud.job("removeUnusedUrbanAirship", function(request, status) {
 
     query.each(function(install) {
         count++;
+        status.message(count.toString());
         install.destroy();
     }).then(function() {
         status.success(count + " Urban Airship entries removed");
     }, function(error) {
-        status.error(error);
+        status.error(error.message);
     });
 });
